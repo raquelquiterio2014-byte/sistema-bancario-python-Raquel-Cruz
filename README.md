@@ -1,101 +1,21 @@
 # sistema-bancario-python-Raquel-Cruz
-Sistema bancário simples em Python com validação de dados e menu interativo
 
-# 🏦 Sistema Bancário em Python
+Depósito, saque e consulta de saldo em memória. Exercício educacional sem contas, autenticação ou persistência.
 
-Projeto simples de sistema bancário desenvolvido em Python, com foco em lógica de programação e boas práticas.
+## Executar
 
-## 🚀 Funcionalidades
-
-- Depósito
-- Saque
-- Consulta de saldo
-- Menu interativo
-- Validação de entradas
-- Proteção contra saldo negativo
-
-## 🧠 Conceitos aplicados
-
-- Funções
-- Estruturas condicionais
-- Laços de repetição
-- Tratamento de erros (try/except)
-- Organização de código
-
-## ▶️ Como executar
+Pré-requisito: Python 3. Execute na pasta do repositório:
 
 ```bash
 python banco.py
+```
 
-def mostrar_menu():
-    print("\n===== SISTEMA BANCÁRIO =====")
-    print("1 - Depositar")
-    print("2 - Sacar")
-    print("3 - Ver saldo")
-    print("4 - Sair")
+No Windows, para C, execute `calculadora.exe` após compilar. Os programas Python usam apenas a biblioteca padrão.
 
+## Escopo
 
-def validar_valor(valor_str):
-    try:
-        valor = float(valor_str)
-        if valor <= 0:
-            print("⚠️ Digite um valor positivo.")
-            return None
-        return valor
-    except ValueError:
-        print("⚠️ Entrada inválida! Digite um número.")
-        return None
+Projeto de estudo de lógica de programação, funções e validação de dados. Os dados são mantidos apenas durante a execução. O código que antes aparecia dentro do README foi transformado em um arquivo de origem executável; versões anteriores continuam no histórico Git.
 
+## Evidência
 
-def depositar(saldo):
-    valor = validar_valor(input("Valor para depósito: R$ "))
-    if valor is not None:
-        saldo += valor
-        print("✅ Depósito realizado com sucesso!")
-    return saldo
-
-
-def sacar(saldo):
-    valor = validar_valor(input("Valor para saque: R$ "))
-    if valor is None:
-        return saldo
-
-    if valor > saldo:
-        print("❌ Saldo insuficiente!")
-        return saldo
-
-    saldo -= valor
-    print("✅ Saque realizado com sucesso!")
-    return saldo
-
-
-def ver_saldo(saldo):
-    print(f"💰 Saldo atual: R$ {saldo:.2f}")
-
-
-def main():
-    saldo = 0.0
-
-    while True:
-        mostrar_menu()
-        opcao = input("Escolha uma opção: ")
-
-        if opcao == "1":
-            saldo = depositar(saldo)
-
-        elif opcao == "2":
-            saldo = sacar(saldo)
-
-        elif opcao == "3":
-            ver_saldo(saldo)
-
-        elif opcao == "4":
-            print("👋 Encerrando sistema...")
-            break
-
-        else:
-            print("⚠️ Opção inválida!")
-
-
-if __name__ == "__main__":
-    main()
+Um exemplo simples para verificar: depositar 10, sacar 3 e consultar saldo 7.
