@@ -10,7 +10,7 @@ Pré-requisito: Python 3. Execute na pasta do repositório:
 python banco.py
 ```
 
-No Windows, para C, execute `calculadora.exe` após compilar. Os programas Python usam apenas a biblioteca padrão.
+O programa usa apenas a biblioteca padrão do Python.
 
 ## Escopo
 
